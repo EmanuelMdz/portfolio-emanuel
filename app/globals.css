@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  color: #e6ebf5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+body {
+  background-color: transparent;
+}
+
+/* Hide native cursor on fine-pointer devices (desktop) — custom dot takes over */
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select,
+  label {
+    cursor: none;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(76, 139, 255, 0.35);
+  color: #fff;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2030;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #242c40;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .glass-pill {
+    @apply rounded-full border border-border-subtle bg-white/[0.03] backdrop-blur-md shadow-pill;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-[1.03] hover:shadow-cta active:scale-100 border border-white/10;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full border border-border-subtle bg-white/[0.02] px-5 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/[0.05];
+  }
+
+  .nav-link {
+    @apply text-sm text-white/70 transition-colors hover:text-white;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-semibold tracking-tight text-white;
+  }
+
+  .muted {
+    @apply text-white/60;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    background: linear-gradient(180deg, #ffffff 0%, #8aa4d4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+  }
+
+  .noise-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--tw-bg-noise, none);
+    opacity: 0.4;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+}
