@@ -85,7 +85,12 @@ export default function Hero() {
           custom={7}
           className="mt-10 flex flex-col sm:flex-row items-center gap-3"
         >
-          <a href="#contact" className="btn-primary group">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=emanuelmendozamori16@gmail.com&su=Let%27s%20work%20together"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary group"
+          >
             Let&apos;s talk
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>

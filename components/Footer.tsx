@@ -25,7 +25,9 @@ export default function Footer() {
           </p>
 
           <a
-            href="mailto:emanuelmendozamori16@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=emanuelmendozamori16@gmail.com&su=Let%27s%20work%20together"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary mt-10 group"
           >
             emanuelmendozamori16@gmail.com
@@ -43,7 +45,7 @@ export default function Footer() {
               <Linkedin className="h-4 w-4" />
             </SocialLink>
             <SocialLink
-              href="mailto:emanuelmendozamori16@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=emanuelmendozamori16@gmail.com&su=Let%27s%20work%20together"
               label="Email"
             >
               <Mail className="h-4 w-4" />
@@ -73,6 +75,8 @@ function SocialLink({
     <a
       href={href}
       aria-label={label}
+      target="_blank"
+      rel="noopener noreferrer"
       className="glass-pill flex h-10 w-10 items-center justify-center text-white/70 transition-colors hover:text-white"
     >
       {children}

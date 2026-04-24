@@ -31,12 +31,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <Link
-          href="#contact"
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=emanuelmendozamori16@gmail.com&su=Let%27s%20work%20together"
+          target="_blank"
+          rel="noopener noreferrer"
           className="glass-pill px-5 py-2 text-sm font-medium text-white transition-transform hover:scale-[1.03]"
         >
           Get in Touch
-        </Link>
+        </a>
       </div>
     </motion.header>
   );
